@@ -1,1 +1,114 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .calculator {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 24px;
+            width: 320px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .display {
+            background: #1a1a1a;
+            color: #ffffff;
+            font-size: 2.2rem;
+            font-weight: 300;
+            padding: 24px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: right;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            height: 60px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .btn-number, .btn-decimal {
+            background: #ffffff;
+            color: #2c3e50;
+            border: 2px solid #e9ecef;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .btn-number:hover, .btn-decimal:hover {
+            background: #f8f9fa;
+            border-color: #dee2e6;
+            transform: translateY(-1px);
+        }
+
+        .btn-operator {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-operator:hover {
+            background: #5a6268;
+        }
+
+        .btn-clear {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-clear:hover {
+            background: #c82333;
+        }
+
+        .btn-equals {
+            background: #007bff;
+            color: white;
+            grid-row: span 2;
+            font-size: 1.8rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-equals:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+        }
+
+        .btn-zero {
+            grid-column: span 2;
+        }
